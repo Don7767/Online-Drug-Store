@@ -1,0 +1,115 @@
+body{
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    background-color: white;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 7px gray;
+    border-radius: 100px;
+    overflow: hidden;
+    height: 450px;
+    width: 1000px;
+    flex-wrap: wrap;
+    align-content: space-evenly;
+    flex-shrink: 1;
+    max-width: 900px;
+    background-color: white;
+}
+
+#foto{
+    height: 500px;
+    width: 500px;
+    padding-top: 0px;
+    background-color: lightcyan;
+    background: linear-gradient(to right, white, lightcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    max-width: 500px;
+}
+
+#tekst{
+    padding-left: 10px;
+    padding-bottom: 50px;
+}
+
+#pic{
+    height: 200px;
+    width: 300px;
+}
+
+#butoni{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px gray;
+}
+
+.login{
+    padding: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin-right: 60px;
+    margin-bottom: 60px;
+    max-width: 900px;
+}
+
+.login input{
+    border: 0;
+    box-shadow: 0px 2px 6px gray;
+    height: 20px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+#butoni1{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    border: none;
+    background-color: blue;
+    color: white;
+}
+
+
+@media(max-width: 650px){
+    body{
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0;
+    }
+    #line{
+        background-color: white;
+        height: 0;
+        width: 0;
+    }
+    .container{
+        overflow: visible;
+        height: 0;
+    }
+    #foto{
+        display: inline;
+        display: flex;
+        background: linear-gradient(to top, white, lightcyan);
+    }
+    .login{
+        margin-left: 110px;
+        margin-top: 20px;
+        box-shadow: 0px 2px 6px gray;
+        border-radius: 30px;
+    }
+    #butoni{
+        margin-left: 100px;
+    }
+}
+
+
