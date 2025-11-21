@@ -1,8 +1,32 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
     margin-top: 80px;
     background-color: white;
+    margin: 0;
+    height: 100%;
+}
+
+#navi{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: lightcyan;
+    max-width: auto;
+}
+
+#foto1{
+    margin-right: auto;
+}
+
+#elemente a{
+    text-decoration: none;
+    color: black;
+    padding: 40px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .container{
@@ -19,6 +43,7 @@ body{
     flex-shrink: 1;
     max-width: 900px;
     background-color: white;
+    margin-top: 50px;
 }
 
 #foto{
@@ -37,6 +62,7 @@ body{
 #tekst{
     padding-left: 10px;
     padding-bottom: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 #pic{
@@ -66,9 +92,21 @@ body{
 .login input{
     border: 0;
     box-shadow: 0px 2px 6px gray;
-    height: 20px;
+    height: 30px;
     width: 200px;
     border-radius: 10px;
+}
+
+#qeku{
+    width: 12px;
+    height: 12px;
+    margin-top: 15px;
+    box-shadow: none;
+}
+
+#qekul{
+    font-size: 14px;
+    color: gray;
 }
 
 #butoni1{
@@ -80,12 +118,13 @@ body{
     color: white;
 }
 
-
 @media(max-width: 650px){
     body{
         display: flex;
+        flex-direction: column;
         flex-wrap: wrap;
         margin: 0;
+        width: 500px;
     }
     #line{
         background-color: white;
@@ -95,6 +134,7 @@ body{
     .container{
         overflow: visible;
         height: 0;
+        margin: 0;
     }
     #foto{
         display: inline;
@@ -102,13 +142,28 @@ body{
         background: linear-gradient(to top, white, lightcyan);
     }
     .login{
-        margin-left: 110px;
+        margin-left: 90px;
         margin-top: 20px;
         box-shadow: 0px 2px 6px gray;
         border-radius: 30px;
     }
     #butoni{
         margin-left: 100px;
+    }
+    #navi{
+        margin-right: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(to bottom, white, lightcyan)
+    }
+    #elemente a{
+        padding: 20px;
+        font-size: 12px;
+    }
+    #foto1{
+        padding-top: 10px;
+        margin-left: 140px;
     }
 }
 

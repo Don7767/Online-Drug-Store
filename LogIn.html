@@ -7,28 +7,45 @@
     <link rel="stylesheet" href="LogIn.css">
 </head>
 <body>
+    <header id="navi">
+        <div id="foto1">
+            <img src="logo2.png" alt="">
+        </div>
+        <nav id="elemente">
+            <a href="">Home</a>
+            <a href="">About us</a>
+            <a href="">Products</a>
+            <a href="">My prescription</a>
+            <a href="">Log In</a>
+        </nav>
+    </header>
 
     <div class="container">
-        <div id="foto">
-            <div id="tekst">
-                <h4>You don't have an account?</h4>
-                <h3>Create one now</h3>
-                <img src="foto1.webp" alt="Foto" id="pic">
-                <br>
-                <input type="button" name="buton" id="butoni" value="Sign up">
+        <form action="" method="POST">
+            <div id="foto">
+                <div id="tekst">
+                    <h4>You don't have an account?</h4>
+                    <h3>Create one now</h3>
+                    <img src="foto1.webp" alt="Foto" id="pic">
+                    <br>
+                    <input type="button" name="buton" id="butoni" value="Sign up">
+                </div>
             </div>
-        </div>
+        </form>
 
         <form action="" method="POST">
             <div class="login">
                 <h2>Log In</h2>
-                <label for="emri">Username</label>
+                <label for="emri" class="info">Username</label>
                 <br>
                 <input type="text" name="" id="">
                 <br><br><br>
-                <label for="password">Password</label>
+                <label for="password" class="info">Password</label>
                 <br>
                 <input type="password" name="" id="">
+                <br>
+                <label for="check" id="qekul">Remember me</label>
+                <input type="checkbox" name="" id="qeku">
                 <br><br><br><br>
                 <input type="submit" name="buton" id="butoni1" value="Log In">
             </div>
