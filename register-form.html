@@ -3,46 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Register Form</title>
+    <title>Register</title>
     <link rel="stylesheet" href="style_1.css">
 </head>
 <body>
 
-<div class="container">
-    <h2>Register</h2>
+    <header id="navi">
+        <div id="foto1">
+            <img src="logo2.png" alt="">
+        </div>
+        <nav id="elemente">
+            <a href="">Home</a>
+            <a href="">About us</a>
+            <a href="">Products</a>
+            <a href="">My prescription</a>
+            <a href="">Log In</a>
+        </nav>
+    </header>
 
-    <form>
-        <div class="input-box">
-            <label>Full Name</label>
-            <input type="text" placeholder="Enter your full name" required>
+    <div class="container">
+        
+        <div class="register">
+            <h2>Register</h2>
+
+            <form action="" method="POST">
+                <div class="input-box">
+                    <label>Full Name</label>
+                    <input type="text" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Email</label>
+                    <input type="email" placeholder="Enter your email" required>
+                </div>
+
+                <div class="input-box">
+                    <label>Password</label>
+                    <input type="password" placeholder="Enter your password" required>
+                </div>
+
+                <div class="birthday">
+                    <label>Birthday</label>
+                    <input type="date" id="birthday" name="birthday">
+                </div>
+
+                <div class="gender-box">
+                    <label>Gender</label>
+                    <div class="gender-options">
+                        <label><input type="radio" name="gender" value="male"> Male</label>
+                        <label><input type="radio" name="gender" value="female"> Female</label>
+                    </div>
+                </div>
+
+                <button type="submit" id="butoni1">Register</button>
+            </form>
         </div>
 
-        <div class="input-box">
-            <label>Email</label>
-            <input type="email" placeholder="Enter your email" required>
-        </div>
-
-        <div class="input-box">
-            <label>Password</label>
-            <input type="password" placeholder="Enter your password" required>
-        </div>
-
-        <div class="input-box">
-            <label>Confirm Password</label>
-            <input type="password" placeholder="Confirm your password" required>
-        </div>
-
-        <div class="gender-box">
-            <label>Gender</label>
-            <div class="gender-options">
-                <label><input type="radio" name="gender" value="male"> Male</label>
-                <label><input type="radio" name="gender" value="female"> Female</label>
+        <div id="foto">
+            <div id="tekst">
+                <h4>Already have an account?</h4>
+                <h3>Log in now</h3>
+                <img src="foto3.png" alt="Foto" id="pic">
+                <br>
+                <input type="button" id="butoni" value="Log In">
             </div>
         </div>
 
-        <button type="submit" class="btn">Submit</button>
-    </form>
-</div>
+        
+
+    </div>
 
 </body>
 </html>

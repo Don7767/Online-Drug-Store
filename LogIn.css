@@ -3,7 +3,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 80px;
+    margin-top: 0;
     background-color: white;
     margin: 0;
     height: 100%;
@@ -15,29 +15,35 @@ body{
     align-items: center;
     justify-content: flex-end;
     background-color: lightcyan;
-    max-width: auto;
+    padding: 10px 50px;
 }
 
 #foto1{
     margin-right: auto;
 }
 
+#foto1 img{
+    height: 50px;
+}
+
 #elemente a{
     text-decoration: none;
     color: black;
-    padding: 40px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    padding: 30px 25px;
+    font-family:'Trebuchet MS', Arial, sans-serif;
 }
+
+
 
 .container{
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 0px 2px 7px gray;
-    border-radius: 100px;
+    border-radius: 50px;
     overflow: hidden;
     height: 450px;
-    width: 1000px;
+    width: 900px;
     flex-wrap: wrap;
     align-content: space-evenly;
     flex-shrink: 1;
@@ -90,12 +96,13 @@ body{
 }
 
 .login input{
-    border: 0;
-    box-shadow: 0px 2px 6px gray;
-    height: 30px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
     width: 200px;
-    border-radius: 10px;
 }
+
 
 #qeku{
     width: 12px;
@@ -166,5 +173,3 @@ body{
         margin-left: 140px;
     }
 }
-
-

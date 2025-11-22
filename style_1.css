@@ -1,68 +1,191 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
-
 body {
-    background: #f2f2f2;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin-top: 0;
+    background-color: white;
+    margin: 0;
+    height: 100%;
 }
 
-.container {
-    background: white;
-    padding: 25px 30px;
-    width: 450px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+#navi{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: lightcyan;
+    padding: 10px 50px;
 }
 
-h2 {
+#foto1{
+    margin-right: auto;
+}
+
+#foto1 img{
+    height: 50px;
+}
+
+#elemente a{
+    text-decoration: none;
+    color: black;
+    padding: 30px 25px;
+    font-family:'Trebuchet MS', Arial, sans-serif;
+}
+
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 900px;
+    height: 450px;
+    background-color: white;
+    box-shadow: 0px 2px 7px gray;
+    align-content: space-evenly;
+    border-radius: 50px;
+    overflow: hidden;
+    margin-top: 50px;
+}
+
+.register{
+    width: 35%;
+    padding: 50px;
+}
+
+.register h2{
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
-.input-box {
-    margin-bottom: 15px;
+.input-box{
+    margin-bottom: 10px;
     display: flex;
     flex-direction: column;
 }
 
-.input-box label {
-    margin-bottom: 5px;
+.input-box label{
+    margin-bottom: 7px;
     font-weight: 600;
 }
 
-.input-box input {
+.input-box input{
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius: 6px;
+    border-radius: 8px;
+    box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
+    width: 300px;
 }
 
-.gender-box {
-    margin-bottom: 25px;
+.gender-box{
+    margin-top: 7px;
+    margin-bottom: 10px;
 }
 
-.gender-options {
-    margin-top: 5px;
-}
-
-.gender-options label {
+.gender-options label{
     margin-right: 15px;
 }
 
-.btn {
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: white;
+#butoni1{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    justify-content: center;   
+    align-items: center;        
     border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
+    background-color: blue;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px gray;
+    margin-left: 35%;
 }
 
+
+/* FOTO - DJATHTAS */
+#foto{
+    height: 500px;
+    width: 500px;
+    padding-top: 0px;
+    background-color: lightcyan;
+    background: linear-gradient(to right, white, lightcyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 1;
+    max-width: 500px;
+}
+
+#tekst{
+    padding-left: 10px;
+    padding-bottom: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#pic{
+    height: 200px;
+    width: 300px;
+}
+
+#butoni{
+    width: 100px;
+    height: 30px;
+    display: flex;
+    border: none;
+    background-color: green;
+    color: white;
+    border-radius: 10px;
+    box-shadow: 0px 2px 6px gray;
+    margin-left: 30%
+    
+}
+
+@media(max-width: 650px){
+    body{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        margin: 0;
+        width: 500px;
+    }
+    #line{
+        background-color: white;
+        height: 0;
+        width: 0;
+    }
+    .container{
+        overflow: visible;
+        height: 0;
+        margin: 0;
+    }
+    #foto{
+        display: inline;
+        display: flex;
+        background: linear-gradient(to top, white, lightcyan);
+    }
+    .login{
+        margin-left: 90px;
+        margin-top: 20px;
+        box-shadow: 0px 2px 6px gray;
+        border-radius: 30px;
+    }
+    #butoni{
+        margin-left: 100px;
+    }
+    #navi{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        background-color: lightcyan;
+        padding: 10px 50px;
+    }
+    #elemente a{
+        padding: 20px;
+        font-size: 12px;
+    }
+    #foto1{
+        padding-top: 10px;
+        margin-left: 140px;
+    }
+}
