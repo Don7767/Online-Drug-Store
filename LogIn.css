@@ -131,7 +131,7 @@ body{
         flex-direction: column;
         flex-wrap: wrap;
         margin: 0;
-        width: 500px;
+        width: auto;
     }
     #line{
         background-color: white;
@@ -162,10 +162,11 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(to bottom, white, lightcyan)
+        background: linear-gradient(to bottom, white, lightcyan);
+        width: 400px;
     }
     #elemente a{
-        padding: 20px;
+        padding: 10px;
         font-size: 12px;
     }
     #foto1{
