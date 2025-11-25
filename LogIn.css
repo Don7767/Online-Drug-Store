@@ -14,7 +14,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: lightcyan;
+    background-color: lightblue;
     padding: 10px 50px;
 }
 
@@ -53,11 +53,11 @@ body{
 }
 
 #foto{
-    height: 514px;
+    height: 500px;
     width: 500px;
     padding-top: 0px;
     background-color: lightcyan;
-    background: linear-gradient(to right, white, lightcyan);
+    background: linear-gradient(to right, white, lightblue);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,7 +85,6 @@ body{
     color: white;
     border-radius: 10px;
     box-shadow: 0px 2px 6px gray;
-    margin-left: 30%;
 }
 
 .login{
@@ -94,8 +93,6 @@ body{
     margin-right: 60px;
     margin-bottom: 60px;
     max-width: 900px;
-    font-weight: bold;
-
 }
 
 .login input{
@@ -104,10 +101,7 @@ body{
     border-radius: 8px;
     box-shadow: 0px 2px 6px rgba(0,0,0,0.1);
     width: 200px;
-    margin-top: 7px;
-
 }
-
 
 #qeku{
     width: 12px;
@@ -128,7 +122,6 @@ body{
     border: none;
     background-color: blue;
     color: white;
-    text-align: center;
 }
 
 @media(max-width: 650px){
@@ -152,7 +145,7 @@ body{
     #foto{
         display: inline;
         display: flex;
-        background: linear-gradient(to top, white, lightcyan);
+        background: linear-gradient(to top, white, lightblue);
     }
     .login{
         margin-left: 90px;
@@ -168,7 +161,7 @@ body{
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(to bottom, white, lightcyan);
+        background: linear-gradient(to bottom, white, lightblue);
         width: 400px;
     }
     #elemente a{

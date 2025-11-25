@@ -14,7 +14,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    background-color: lightcyan;
+    background-color: lightblue;
     padding: 10px 50px;
 }
 
@@ -120,7 +120,7 @@ body {
     width: 450px;
     padding-top: 0px;
     background-color: lightcyan;
-    background: linear-gradient(to left, white, lightcyan);
+    background: linear-gradient(to left, white, lightblue);
     display: flex;
     justify-content: center;
     align-items: center;
