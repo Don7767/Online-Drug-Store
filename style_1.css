@@ -108,7 +108,7 @@ body {
 
 #butoni1{
     width: 100px;
-    height: 30px;
+    height: 34px;
     display: flex;
     justify-content: center;   
     align-items: center;        
@@ -147,7 +147,7 @@ body {
 
 #butoni{
     width: 100px;
-    height: 30px;
+    height: 34px;
     display: flex;
     border: none;
     background-color: green;
@@ -231,52 +231,153 @@ body {
     color: black;
 }
 
-@media(max-width: 650px){
-    body{
-        display: flex;
+@media(max-width: 768px){
+
+    #navi{
         flex-direction: column;
+        justify-content: center;
+        -items: center;
+        background: linear-gradient(to bottom, white, lightblue);
+        padding: 15px;
+    }
+
+    #foto1{
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    #elemente {
+        display: flex;
+        gap: 10px;
         flex-wrap: wrap;
-        margin: 0;
-        width: auto;
+        justify-content: center;
+        margin-top: 10px;
     }
-    #line{
-        background-color: white;
-        height: 0;
-        width: 0;
+
+    #elemente a {
+        padding: 6px 10px;
+        font-size: 14px;
     }
-    .container{
-        overflow: visible;
-        height: 0;
-        margin: 0;
+
+   .container{
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        margin-top: 120px;
+        border-radius: 20px;
+        text-align: center;
+        box-shadow: 0px 2px 7px gray;
+        padding-bottom: 20px;
     }
+
+    #foto{
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        background: linear-gradient(to top, white, lightblue);
+        padding: 20px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #pic{
+        width: 70%;
+        height: auto;
+    }
+
+    #tekst{
+        text-align: center;
+        padding: 10px;
+    }
+
+
+    .register,
+    .login{
+        width: 90%;
+        max-width: 380px;
+        margin: 20px auto;
+        padding: 25px;
+        border-radius: 20px;
+        box-shadow: 0px 2px 6px gray;
+        background: white;
+    }
+
+    .input-box input{
+        width: 100%;
+    }
+
+    /* Butonat qendër */
+    #butoni,
+    #butoni1{
+        margin: 20px auto 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /* Heq margin-left të paneve */
+    .register,
+    .login{
+        margin-left: 0 !important;
+    }
+
     #foto{
         display: inline;
         display: flex;
         background: linear-gradient(to top, white, lightcyan);
     }
+
     .login{
         margin-left: 90px;
         margin-top: 20px;
         box-shadow: 0px 2px 6px gray;
         border-radius: 30px;
     }
+
     #butoni{
         margin-left: 100px;
     }
-    #navi{
+
+
+    .footer {
+        padding: 30px 0;
+        margin-top: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        align-items: flex-start;
+        text-align: left;
+        gap: 25px;
+        width: 90%;
+    }
+
+    .footer-section {
         width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: flex-end;
-        background-color: lightcyan;
-        padding: 10px 50px;
     }
-    #elemente a{
-        padding: 20px;
-        font-size: 12px;
+
+    .footer-logo {
+        height: 55px;
+        margin-bottom: 15px;
     }
-    #foto1{
-        padding-top: 10px;
-        margin-left: 140px;
+
+    .footer-text {
+        max-width: 100%;
+        line-height: 1.6;
+    }
+
+    .footer-section h3 {
+        margin-top: 10px;
+        margin-bottom: 8px;
+        font-size: 20px;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 30px;
     }
 }
