@@ -6,6 +6,11 @@ body {
   text-decoration: none;
 }
 
+body::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
 #navi{
   width: 100%;
   display: flex;
