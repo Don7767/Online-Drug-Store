@@ -86,11 +86,11 @@ body::-webkit-scrollbar {
 
 #shto{
   background-color: rgb(2, 69, 2);
-  background: linear-gradient(to left, rgb(2, 69, 2), rgb(56, 180, 56));
+  background: linear-gradient(to left, rgb(2, 69, 2), rgb(29, 206, 29));
 }
 
 #pay{
-  background: linear-gradient(to right, blue, rgb(104, 104, 220));
+  background: linear-gradient(to right, blue, rgb(14, 14, 70));
   background-color: rgb(21, 21, 120);
 }
 

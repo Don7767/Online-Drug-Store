@@ -116,14 +116,14 @@ body::-webkit-scrollbar {
   display: flex;
   gap: 50px; 
   align-items: center;
-  padding: 15px;
+  padding: 10px;
   border-radius: 30px;
   background-color: lightblue;
   transition: 0.2s;
 }
 .category:hover{
   transform: scale(1.10);
-  border-radius: 15px;
+  border-radius: 10px;
 }
 
 #sec3 {
@@ -133,11 +133,9 @@ body::-webkit-scrollbar {
 }
 
 #produktet {
-  display: grid;
-  gap: 20px;
-  padding-top: 0px;
+  display: flex;
   width: 100%;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -149,10 +147,11 @@ body::-webkit-scrollbar {
   padding: 10px 15px;
   border-radius: 10px;
   width: 70%; 
+  height: 30px;
   box-shadow: 0 1px 5px gray;
 }
 .search-box:hover{
-  border: 1.2px solid darkgray;
+  box-shadow: 0px 1px 13px gray;
 }
 
 .search-box input {
@@ -226,8 +225,7 @@ a img:hover{
   transition: 0.2s;
 }
 .shto:hover{
-  transform: scale(1.02);
-  box-shadow: 0px 0px 10px lightgreen;
+  transform: scale(1.03);
 }
 
 .rate{
