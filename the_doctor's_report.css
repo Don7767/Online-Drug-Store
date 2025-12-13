@@ -1,0 +1,212 @@
+body{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 0;
+  background-color: white;
+  margin: 0;
+  margin-top: 70px;
+  height: 100%;
+  background-color: rgb(239, 239, 239);
+}
+
+#navi {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    background-color: lightblue;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+
+#foto1 {
+    margin-right: auto;
+}
+
+#foto1 img {
+    height: 50px;
+}
+
+#elemente a {
+    text-decoration: none;
+    color: black;
+    padding: 30px 25px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+}
+
+.title {
+    text-align: center;
+    margin: 40px 0 20px 0;
+    font-size: 36px;
+    margin-bottom: 40px;
+}
+
+.cards-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 400px 480px;
+    gap: 80px;
+    grid-auto-rows: max-content;
+    align-items: start;
+    margin-bottom: 20px;
+}
+
+.left-col {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.card {
+    margin-left: -50px;
+    width: 500px;
+    grid-column: 2;
+    background-color: rgb(240, 240, 254);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 7px gray;
+}
+
+.card2 {
+    width: 350px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 7px gray;
+}
+
+.card2 img {
+    display: block;
+    margin: 0 auto 15px auto;
+    width: 170px;
+}
+
+.id-button {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+#id-number {
+    width: 250px;
+    padding: 10px;
+    border-radius: 3px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+.product {
+    width: 350px;
+    background-color: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 0 7px gray;
+    background-color: azure;
+}
+
+.product h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.search input {
+    width: 290px;
+    padding: 10px;
+    margin-left: 15px;
+    margin-top: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.card h2, .card2 h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer {
+    width: 100%;
+    background-color: lightblue;
+    color: black;
+    padding: 40px 0 10px 0;
+    margin-top: 40px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footer-container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.footer-section {
+    width: 30%;
+    min-width: 250px;
+    margin-bottom: 20px;
+}
+
+.footer-logo {
+    height: 60px;
+    margin-bottom: 15px;
+}
+
+.footer-section h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 6px 0;
+    color: black;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+.footer-section ul li a:hover {
+    color: black;
+    text-decoration: underline;
+}
+
+.footer-text {
+    max-width: 230px;
+    line-height: 1.5;
+    color: black;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 10px 0;
+    border-top: 1px solid #444;
+    margin-top: 20px;
+}
+
+.footer-bottom p {
+    margin: 0;
+    color: black;
+}
