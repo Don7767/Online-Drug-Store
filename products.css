@@ -377,8 +377,12 @@ a img:hover{
     font-size: 13px;
   }
 
+  #sec3{
+    margin-top: 0px;
+  }
+
    .search-box {
-    width: 70%;         
+    width: 50%;         
     display: flex;
     flex-direction: row;
     gap: 6px;            
@@ -398,6 +402,16 @@ a img:hover{
     padding: 5px 8px;
   }
 
+  #search{
+    display: flex;
+    align-items: end;
+    justify-content: space-evenly;
+  }
+
+  .category{
+    padding: 8px;
+  }
+
   #sec1 {
     flex-direction: column;
   }
@@ -406,11 +420,13 @@ a img:hover{
     max-width: 100%;
     width: 100%;
     margin-top: 30px;
+    height: 110px;
   }
 
   #container1{
     border-radius: 0px;
     background: linear-gradient(to right, whitesmoke, whitesmoke);
+    height: 130px;
   }
 
   #lista1 {
@@ -437,7 +453,15 @@ a img:hover{
     margin-top: 15px;
   }
 
-  h4 {
-   display: none;
+  h4{
+    font-weight: lighter;
+    font-size: 14px;
+    color: rgb(66, 66, 66);
+  }
+
+  #info{
+    display: flex;
+    gap: 50px;
+    align-items: center;
   }
 }
