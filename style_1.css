@@ -163,6 +163,12 @@ body::-webkit-scrollbar {
     
 }
 
+#tekst img{
+    width: 240px;
+    height: 220px;
+}
+
+
 .footer {
     width: 100%;
     background-color: lightblue;
