@@ -85,7 +85,7 @@ body::-webkit-scrollbar {
     margin: 0px auto;
     background-color: rgb(240, 240, 240);
     padding: 20px 7px;
-    margin-bottom: 0;
+    margin-bottom: -40px;
 }
 
 .section-box h2{

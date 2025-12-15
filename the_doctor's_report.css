@@ -104,14 +104,12 @@ body{
     font-size: 14px;
 }
 
-
 .product {
     width: 350px;
     background-color: white;
     padding: 25px;
     border-radius: 15px;
     box-shadow: 0 0 7px gray;
-    background-color: azure;
 }
 
 .product h2 {
@@ -137,6 +135,15 @@ body{
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+
+#tit2 {
+    margin-left: 15px;
+}
+
+#click {
+    margin-left: 25px;        
+    font-weight: bold;   
 }
 
 .footer {
