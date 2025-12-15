@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
     color: black;
 }
 
-@media(max-width: 768px){
+@media(max-width: 1024px){
 
     #navi{
         flex-direction: column;
@@ -234,7 +234,7 @@ body::-webkit-scrollbar {
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
-        gap: 20px;
+        gap: 10px;
         margin: 10px 15px 0px 0px;
     }
 
@@ -245,87 +245,53 @@ body::-webkit-scrollbar {
 
     .container{
         flex-direction: column;
-        width: 95%;
+        width: 400px;
+        max-width: 450px;
         height: auto;
-        margin-top: 100px;
+        margin: 100px auto 0;
         border-radius: 20px;
         text-align: center;
-        justify-content: space-evenly;
-    }
-
-    #foto{
-        margin-left: -25px;
-        width: 480px;
-        height: auto;
-        background: linear-gradient(to top, white, lightblue);
-        padding: 20px;
-        text-align: center;
-        justify-content: center;
-    }
-
-    #tekst{
-        padding: 15px;
-        text-align: center;
-        margin-right: 60px;
     }
 
     .login{
-        margin: -20px;
-        margin-left: -100px;
-        width: 480px;
-        box-shadow: 0px 2px 6px gray;
-        border-radius: 20px;
+        width: 100%;
+        max-width: 400px;
+        padding: 0px;
+        margin-top: 40px;
     }
 
-    #butoni{
-        margin-left: 100px;
-        justify-content: center;
+    .input-box input{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
     }
 
     #butoni1{
-        margin-left: 190px;
+        margin: 20px auto 0;
+        display: flex;
+        justify-content: center;
     }
 
-    #foto1{
-        margin: 10px auto;
+    #foto{
+        width: 350px;
+        max-width: 400px;
+        margin: 20px auto 0;
+        padding: 20px;
+        background: linear-gradient(to top, lightblue, white);
+        border-radius: 20px;
     }
 
-    .footer {
-        padding: 30px 0;
-        margin-top: 45px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        gap: 25px;
-        width: 90%;
-    }
-
-    .footer-section {
-        width: 100%;
-    }
-
-    .footer-logo {
-        height: 55px;
-        margin-bottom: 15px;
-    }
-
-    .footer-text {
-        max-width: 100%;
-        line-height: 1.6;
-    }
-
-    .footer-section h3 {
-        margin-top: 10px;
-        margin-bottom: 8px;
-        font-size: 20px;
-    }
-
-    .footer-bottom {
+    #tekst{
+        margin: 0;
+        padding: 15px;
         text-align: center;
-        margin-top: 30px;
+    }
+
+    #butoni{
+        margin: 15px auto 0;
+        display: flex;
+        justify-content: center;
     }
 }
 
