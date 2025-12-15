@@ -1,14 +1,11 @@
-body{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0;
-  background-color: white;
-  margin: 0;
-  margin-top: 70px;
-  height: 100%;
-  background-color: rgb(239, 239, 239);
+body {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    margin-top: 70px; 
+    background-color: #f5f5f5;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+    color: #333;
 }
 
 #navi {
@@ -42,108 +39,174 @@ body{
 .title {
     text-align: center;
     margin: 40px 0 20px 0;
-    font-size: 36px;
-    margin-bottom: 40px;
+    font-size: 32px;
+    color: #222;
 }
 
 .cards-wrapper {
     display: flex;
     justify-content: center;
+    width: 100%;
 }
 
 .container {
-    display: grid;
-    grid-template-columns: 400px 480px;
-    gap: 80px;
-    grid-auto-rows: max-content;
-    align-items: start;
-    margin-bottom: 20px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    max-width: 1050px;
+    width: 100%;
+    padding: 20px;
+    gap: 30px;
 }
 
 .left-col {
+    flex: 0 0 450px;
     display: flex;
     flex-direction: column;
     gap: 25px;
 }
 
-.card {
-    margin-left: -50px;
-    width: 500px;
-    grid-column: 2;
-    background-color: rgb(240, 240, 254);
-    padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 7px gray;
-}
-
 .card2 {
-    width: 350px;
+    width: 400px;
     background-color: white;
     padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 7px gray;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
 }
 
 .card2 img {
     display: block;
     margin: 0 auto 15px auto;
-    width: 170px;
-}
-
-.id-button {
-    display: flex;
-    justify-content: center;
-    margin-bottom: 20px;
+    width: 120px;
 }
 
 #id-number {
-    width: 250px;
+    width: 80%;
     padding: 10px;
-    border-radius: 3px;
+    border-radius: 6px;
     border: 1px solid #ccc;
     font-size: 14px;
 }
 
-.product {
-    width: 350px;
-    background-color: white;
+.card {
+    width: 450px;
+    background-color: #eef2ff;
     padding: 25px;
-    border-radius: 15px;
-    box-shadow: 0 0 7px gray;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
 }
 
-.product h2 {
+.card h2 {
     text-align: center;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
+    color: #444;
 }
 
-.search input {
-    width: 290px;
-    padding: 10px;
-    margin-left: 15px;
-    margin-top: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+.card-content p {
+    margin: 6px 0;
+    line-height: 1.5;
 }
 
-.card h2, .card2 h2 {
-    text-align: center;
+#produktet {
+    flex: 1;
+    display: flex;
+    flex-direction: row;   
+    flex-wrap: wrap;       
+    gap: 20px;
+}
+
+.search-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
     margin-bottom: 20px;
 }
 
-.card-content {
+.search-box input {
+    flex: 1;
+    min-width: 150px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.search-btn {
+    padding: 8px 14px;
+    background-color: #046604;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.2s;
+}
+
+.search-btn:hover {
+    background-color: #034d03;
+}
+
+.prod {
+    width: 200px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    border-radius: 10px;
+    background-color: white;
+    text-align: center;
+    transition: transform 0.2s;
+}
+
+.prod:hover {
+    transform: translateY(-5px);
+}
+
+.prod a {
+    text-decoration: none;
+    color: #222;
+}
+
+.prod img.main {
+    height: 140px;
+    width: auto;
+    margin-bottom: 10px;
+}
+
+.shto {
+    display: inline-block;
+    background-color: #046604;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 13px;
+    padding: 6px 10px;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.shto:hover {
+    background-color: #034d03;
+}
+
+.rateFav {
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    justify-content: space-between;
+    margin-top: 10px;
 }
 
-#tit2 {
-    margin-left: 15px;
+.rate {
+    width: 80px;
+    height: 18px;
 }
 
-#click {
-    margin-left: 25px;        
-    font-weight: bold;   
+.fav {
+    transition: 0.2s;
+}
+
+.fav:hover {
+    transform: scale(1.2);
 }
 
 .footer {
@@ -152,7 +215,6 @@ body{
     color: black;
     padding: 40px 0 10px 0;
     margin-top: 40px;
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .footer-container {
