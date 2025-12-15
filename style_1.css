@@ -242,14 +242,13 @@ body::-webkit-scrollbar {
     color: black;
 }
 
-@media(max-width: 768px){
+@media(max-width: 1024px){
 
     #navi{
         flex-direction: column;
         justify-content: center;
-        -items: center;
+        align-items: center;
         background: linear-gradient(to bottom, white, lightblue);
-        padding: 15px;
     }
 
     #foto1{
@@ -261,134 +260,68 @@ body::-webkit-scrollbar {
 
     #elemente {
         display: flex;
-        gap: 10px;
         flex-wrap: wrap;
         justify-content: center;
-        margin-top: 10px;
+        align-items: center;
+        gap: 10px;
+        margin: 10px 15px 0px 0px;
     }
 
     #elemente a {
-        padding: 6px 10px;
-        font-size: 14px;
+        padding: 5px 5px;
+        font-size: 13px;
     }
 
-   .container{
+    .container{
         flex-direction: column;
-        width: 90%;
+        width: 95%;
+        max-width: 450px;
         height: auto;
-        margin-top: 120px;
+        margin: 100px auto 0;
         border-radius: 20px;
         text-align: center;
-        box-shadow: 0px 2px 7px gray;
-        padding-bottom: 20px;
+    }
+
+
+    .register{
+        width: 100%;
+        padding: 25px;
+        background: white;
+        border-radius: 20px;
+        box-shadow: 0px 0px 2px gray;
+    }
+
+    .input-box input{
+        width: 100%;
+        max-width: 300px;
+        margin: 0 auto;
+        display: block;
+    }
+
+    #butoni1{
+        margin: 20px auto 0;
+        display: flex;
+        justify-content: center;
     }
 
     #foto{
         width: 100%;
         max-width: 400px;
-        height: auto;
-        background: linear-gradient(to top, white, lightblue);
+        margin: 20px auto 0;
         padding: 20px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    #pic{
-        width: 70%;
-        height: auto;
+        background: linear-gradient(to top, lightblue, white);
+        border-radius: 20px;
     }
 
     #tekst{
+        margin: 0;
+        padding: 15px;
         text-align: center;
-        padding: 10px;
-    }
-
-
-    .register,
-    .login{
-        width: 90%;
-        max-width: 380px;
-        margin: 20px auto;
-        padding: 25px;
-        border-radius: 20px;
-        box-shadow: 0px 2px 6px gray;
-        background: white;
-    }
-
-    .input-box input{
-        width: 100%;
-    }
-
-    /* Butonat qendër */
-    #butoni,
-    #butoni1{
-        margin: 20px auto 0 auto;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    /* Heq margin-left të paneve */
-    .register,
-    .login{
-        margin-left: 0 !important;
-    }
-
-    #foto{
-        display: inline;
-        display: flex;
-        background: linear-gradient(to top, white, lightcyan);
-    }
-
-    .login{
-        margin-left: 90px;
-        margin-top: 20px;
-        box-shadow: 0px 2px 6px gray;
-        border-radius: 30px;
     }
 
     #butoni{
-        margin-left: 100px;
-    }
-
-
-    .footer {
-        padding: 30px 0;
-        margin-top: 20px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        align-items: flex-start;
-        text-align: left;
-        gap: 25px;
-        width: 90%;
-    }
-
-    .footer-section {
-        width: 100%;
-    }
-
-    .footer-logo {
-        height: 55px;
-        margin-bottom: 15px;
-    }
-
-    .footer-text {
-        max-width: 100%;
-        line-height: 1.6;
-    }
-
-    .footer-section h3 {
-        margin-top: 10px;
-        margin-bottom: 8px;
-        font-size: 20px;
-    }
-
-    .footer-bottom {
-        text-align: center;
-        margin-top: 30px;
+        margin: 15px auto 0;
+        display: flex;
+        justify-content: center;
     }
 }
