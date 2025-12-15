@@ -68,6 +68,7 @@ body {
 
 .card2 {
     width: 400px;
+    margin-left: 20px;
     background-color: white;
     padding: 25px;
     border-radius: 12px;
@@ -78,7 +79,7 @@ body {
 .card2 img {
     display: block;
     margin: 0 auto 15px auto;
-    width: 120px;
+    width: 150px;
 }
 
 #id-number {
@@ -117,7 +118,10 @@ body {
 }
 
 .search-box {
-    width: 100%;
+    width: 500px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 45px;
     display: flex;
     justify-content: center;
     gap: 10px;
@@ -168,12 +172,14 @@ body {
 }
 
 .prod img.main {
-    height: 140px;
+    height: 160px;
     width: auto;
     margin-bottom: 10px;
 }
 
 .shto {
+    width: 150px;
+    height: 35px;
     display: inline-block;
     background-color: #046604;
     color: white;
@@ -188,25 +194,6 @@ body {
 
 .shto:hover {
     background-color: #034d03;
-}
-
-.rateFav {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 10px;
-}
-
-.rate {
-    width: 80px;
-    height: 18px;
-}
-
-.fav {
-    transition: 0.2s;
-}
-
-.fav:hover {
-    transform: scale(1.2);
 }
 
 .footer {
