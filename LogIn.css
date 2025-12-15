@@ -278,8 +278,9 @@ body::-webkit-scrollbar {
         max-width: 400px;
         margin: 20px auto 0;
         padding: 20px;
-        background: linear-gradient(to top, lightblue, white);
+        background: linear-gradient(to bottom, lightblue, white);
         border-radius: 20px;
+        margin: 0px;
     }
 
     #tekst{
