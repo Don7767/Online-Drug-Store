@@ -240,3 +240,73 @@ body::-webkit-scrollbar {
     margin: 0;
     color: black;
 }
+
+@media (max-width: 1024px) {
+
+    .home{
+    height: auto;
+  }
+
+  #navi{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, white, lightblue);
+  }
+
+  #foto1{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #elemente {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+    margin: 10px 15px 0px 0px;
+  }
+
+  #elemente a {
+    padding: 5px 5px;
+    font-size: 13px;
+  }
+
+  #sec {
+    flex-direction: column;
+    padding: 15px;
+    gap: 30px;
+  }
+
+  #foto img {
+    width: 100%;
+    max-width: 350px;
+    height: auto;
+  }
+
+  #sec3 {
+    width: 100%;
+    margin-top: 0;
+    padding: 10px;
+  }
+
+  #fav-price{
+    justify-content: space-between;
+  }
+  #shto-pay {
+    justify-content: center;
+    gap: 15px;
+  }
+
+  #quantity {
+    margin: 20px auto;
+  }
+
+  #max {
+    text-align: center;
+    margin: 5px auto;
+  }
+}
