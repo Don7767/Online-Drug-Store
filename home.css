@@ -217,6 +217,7 @@ body{
   inset: 0;
   pointer-events: none;
   text-align: center;
+  margin-top: 80px;
 }
 
 #slider{
