@@ -23,42 +23,50 @@
     </header>
 
     <div class="container">
-        
-        <div class="register">
+
+        <form action="" method="POST">
+            <div class="register">
             <h2>Register</h2>
 
-            <form action="" method="POST">
+            
                 <div class="input-box">
-                    <label>Full Name</label>
-                    <input type="text" placeholder="Enter your full name" required>
+                    <label class="info">Full Name</label>
+                    <input type="text" id="fullname" placeholder="Enter your full name">
+                    <p class="error-text" id="fullnameError"></p>
                 </div>
 
                 <div class="input-box">
-                    <label>Email</label>
-                    <input type="email" placeholder="Enter your email" required>
+                    <label class="info">Email</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <p class="error-text" id="emailError"></p>
                 </div>
 
                 <div class="input-box">
-                    <label>Password</label>
-                    <input type="password" placeholder="Enter your password" required>
+                    <label class="info">Password</label>
+                    <input type="password" id="password" placeholder="Enter your password">
+                    <p class="error-text" id="passwordError"></p>
                 </div>
 
                 <div class="birthday">
-                    <label>Birthday</label>
+                    <label class="info">Birthday</label>
                     <input type="date" id="birthday" name="birthday">
+                    <p class="error-text" id="birthdayError"></p>
                 </div>
 
                 <div class="gender-box">
-                    <label>Gender</label>
+                    <label class="info">Gender</label>
                     <div class="gender-options">
-                        <label><input type="radio" name="gender" value="male"> Male</label>
-                        <label><input type="radio" name="gender" value="female"> Female</label>
+                        <label class="info"><input type="radio" name="gender" value="male"> Male</label>
+                        <label class="info"><input type="radio" name="gender" value="female"> Female</label>
                     </div>
+                    <p class="error-text id="genderError"></p>
                 </div>
 
                 <button type="submit" id="butoni1">Register</button>
-            </form>
+           
         </div>
+        </form>
+        
 
         <div id="foto">
             <div id="tekst">
@@ -106,5 +114,6 @@
         <p>© 2025 Health Bloom — All rights reserved.</p>
     </div>
 </footer>
+<script src="regjister.js"></script>
 </body>
 </html>
