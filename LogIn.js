@@ -14,11 +14,11 @@ btn.addEventListener("click", function () {
     let valid = true;
 
     if (username.value.trim() === "") {
-        userError.textContent = "Username eshte i detyrueshem.";
+        userError.textContent = "Username is required";
         userError.style.visibility = "visible";
         valid = false;
     } else if (!usernameRegex.test(username.value.trim())) {
-        userError.textContent = "Min 3 shkronja ose numra.";
+        userError.textContent = "Min 3 letters or numbers";
         userError.style.visibility = "visible";
         valid = false;
     } else {
@@ -26,11 +26,11 @@ btn.addEventListener("click", function () {
     }
 
     if (password.value.trim() === "") {
-        passError.textContent = "Password eshte i detyrueshëm.";
+        passError.textContent = "Password is required";
         passError.style.visibility = "visible";
         valid = false;
     } else if (!passwordRegex.test(password.value.trim())) {
-        passError.textContent = "Min 8 karaktere.";
+        passError.textContent = "Min 8 characters";
         passError.style.visibility = "visible";
         valid = false;
     } else {
@@ -41,3 +41,8 @@ btn.addEventListener("click", function () {
         window.location.href = "home.html";
     }
 });
+
+const btn2 = document.getElementById("butoni");
+btn2.addEventListener("click", function() {
+    window.location.href = "register-form.html"
+})

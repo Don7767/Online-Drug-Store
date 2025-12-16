@@ -39,23 +39,6 @@ body{
     font-family:'Trebuchet MS', Arial, sans-serif;
 }
 
-/* .container{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0px 2px 7px gray;
-    border-radius: 50px;
-    overflow: hidden;
-    height: 450px;
-    width: 900px;
-    flex-wrap: wrap;
-    align-content: space-evenly;
-    flex-shrink: 1;
-    max-width: 900px;
-    background-color: white;
-    margin-top: 50px;
-} */
-
 .container {
     display: flex;
     justify-content: space-between;
@@ -67,6 +50,7 @@ body{
     width: 900px;
     background-color: white;
     margin-top: 50px;
+    height: 460px;
 }
 
 
@@ -166,21 +150,17 @@ body{
 
 .error-text {
     color: red;
-    font-size: 12px;
+    font-size: 11px;
     visibility: hidden;
     height: 14px;
     margin-top: 4px;
-}
-
-.remember {
-    margin-top: 10px;
+    height: 5px;
+    font-weight: lighter;
 }
 
 .btn-wrapper {
-    margin-top: 30px;
+    margin-top: 20px;
 }
-
-
 
 .footer {
     width: 100%;
@@ -307,7 +287,6 @@ body{
         max-width: 300px;
         margin: 0 auto;
         display: block;
-
     }
 
     #butoni1{
@@ -341,7 +320,7 @@ body{
     .info{
         display: flex;
         flex: wrap;
-        justify-content: flex-start;
+        justify-content: center;
     }
 }
 
