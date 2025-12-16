@@ -239,6 +239,13 @@ body{
   border-radius: 15px;
 }
 
+#linku img{
+  transition: 0.2s;
+}
+#linku img:hover{
+  transform: scale(1.05);
+}
+
 #majt{
   position: absolute;
   width: 60px;
