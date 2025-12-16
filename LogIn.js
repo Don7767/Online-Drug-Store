@@ -7,7 +7,7 @@ const userError = document.getElementById("userError");
 const passError = document.getElementById("passError");
 
 const usernameRegex = /^[a-zA-Z0-9]{3,}$/;
-const passwordRegex = /^.{8,}$/;
+const passwordRegex = /^^(?=.+[A-Z])(?=.+\d)(?=.+[*&^%$#@!]).{8,}$$/;
 
 btn.addEventListener("click", function () {
 
@@ -30,7 +30,7 @@ btn.addEventListener("click", function () {
         passError.style.visibility = "visible";
         valid = false;
     } else if (!passwordRegex.test(password.value.trim())) {
-        passError.textContent = "Min 8 characters";
+        passError.textContent = "Min 8 characters, at least one special character, capital letter and number";
         passError.style.visibility = "visible";
         valid = false;
     } else {
