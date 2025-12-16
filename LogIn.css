@@ -10,11 +10,6 @@ body{
     height: 100%;
 }
 
-body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 #navi{
     width: 100%;
     display: flex;
@@ -97,6 +92,10 @@ body::-webkit-scrollbar {
     box-shadow: 0px 2px 6px gray;
 }
 
+#butoni:hover{
+    background-color: rgb(0, 99, 0);
+}
+
 .login{
     padding: 50px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -137,6 +136,10 @@ body::-webkit-scrollbar {
     color: white;
     border-radius: 10px;
     box-shadow: 0px 2px 6px gray;
+}
+
+#butoni1:hover {
+    background-color: rgb(1, 1, 174);
 }
 
 

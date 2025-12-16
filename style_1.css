@@ -10,11 +10,6 @@ body {
     height: 100%;
 }
 
-body::-webkit-scrollbar {
-  width: 0;
-  height: 0;
-}
-
 #navi{
     width: 100%;
     display: flex;
@@ -125,6 +120,10 @@ body::-webkit-scrollbar {
     margin-left: 35%;
 }
 
+#butoni1:hover{
+    background-color: rgb(0, 0, 181);
+}
+
 
 #foto{
     height: 500px;
@@ -160,7 +159,10 @@ body::-webkit-scrollbar {
     border-radius: 10px;
     box-shadow: 0px 2px 6px gray;
     margin-left: 30%
-    
+}
+
+#butoni:hover{
+    background-color: rgb(0, 91, 0);
 }
 
 #tekst img{
