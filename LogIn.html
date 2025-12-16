@@ -34,24 +34,40 @@
             </div>
         </form>
 
-        <form action="" method="POST">
-            <div class="login">
-                <h2>Log In</h2>
-                <label for="emri" class="info">Username</label>
-                <br>
-                <input type="text" name="" id="" placeholder="Username">
-                <br><br><br>
-                <label for="password" class="info">Password</label>
-                <br>
-                <input type="password" name="" id="" placeholder="Password">
-                <br>
-                <label for="check" id="qekul">Remember me</label>
-                <input type="checkbox" name="" id="qeku">
-                <br><br><br><br>
-                <input type="submit" name="buton" id="butoni1" value="Log In">
-            </div>
-        </form>
+<form action="" method="POST">
+    <div class="login">
+
+        <h2>Log In</h2>
+
+        <div class="form-control">
+            <label class="info">Username</label>
+            <input type="text" id="username" placeholder="Username">
+            <p class="error-text" id="userError">
+                Username është i detyrueshëm.
+            </p>
+        </div>
+
+        <div class="form-control">
+            <label class="info">Password</label>
+            <input type="password" id="password" placeholder="Password">
+            <p class="error-text" id="passError">
+                Password është i detyrueshëm.
+            </p>
+        </div>
+
+        <div class="remember">
+            <label id="qeku1">Remember me</label>
+            <input type="checkbox" id="qeku">
+        </div>
+
+        <div class="btn-wrapper">
+            <input type="button" id="butoni1" value="Log In">
+        </div>
+
     </div>
+</form>
+
+</div>
 
     <footer class="footer">
     <div class="footer-container">
@@ -88,5 +104,9 @@
         <p>© 2025 Health Bloom — All rights reserved.</p>
     </div>
 </footer>
+
+<script src="LogIn.js">
+
+</script>
 </body>
 </html>
