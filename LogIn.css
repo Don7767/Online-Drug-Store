@@ -37,6 +37,10 @@ body{
     color: black;
     padding: 30px 25px;
     font-family:'Trebuchet MS', Arial, sans-serif;
+    height: 10px;
+}
+#elemente a:hover{
+    font-weight: bold;
 }
 
 .container {
@@ -49,7 +53,7 @@ body{
     min-height: 450px;
     width: 900px;
     background-color: white;
-    margin-top: 50px;
+    margin-top: 25px;
     height: 500px;
 }
 
