@@ -38,6 +38,9 @@ body {
     padding: 30px 25px;
     font-family:'Trebuchet MS', Arial, sans-serif;
 }
+#elemente a:hover{
+    font-weight: bold;
+}
 
 
 .container{
@@ -51,14 +54,14 @@ body {
     align-content: space-evenly;
     border-radius: 50px;
     overflow: hidden;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 #tit {
     margin-left: 120px;
     margin-top: 0px;
     margin-bottom: 20px;
-    font-weight: bolt;
+    font-weight: bold;
 }
 
 .register{
@@ -90,7 +93,7 @@ body {
 }
 
 .gender-box{
-    margin-top: 7px;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -116,7 +119,8 @@ body {
 .birthday-wrapper {
     display: flex;
     align-items: center;   
-    gap: 10px;            
+    gap: 10px;   
+    margin-top: 5px;         
 }
 
 .error-text {
@@ -392,6 +396,12 @@ body {
         margin: 0;
         padding: 15px;
         text-align: center;
+    }
+
+    @media(max-width: 430px){
+        #tekst{
+            margin-right: 50px;
+        }
     }
 
     #butoni{

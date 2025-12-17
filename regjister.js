@@ -14,7 +14,7 @@ const genderError = document.getElementById("genderError");
 
 const fullnameRegex = /^[A-Z][a-zA-Z''-]+(?: [A-Z][a-zA-Z''-]+)+$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const passwordRegex = /^^(?=.+[A-Z])(?=.+\d)(?=.+[*&^%$#@!]).{8,}$$/;
+const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[*&^%$#@!]).{8,}$/;
 
 btn.addEventListener("click", function (event) {
     event.preventDefault(); 
