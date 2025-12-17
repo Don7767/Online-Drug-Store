@@ -161,7 +161,7 @@ body {
 .error-text {
     text-align: start;
     color: red;
-    font-size: 12px;
+    font-size: 14px;
     visibility: hidden;
     margin-top: 5px;
 }
