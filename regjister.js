@@ -86,6 +86,11 @@ btn.addEventListener("click", function (event) {
     if (valid) {
         window.location.href = "home.html";
     }
-
+    
 });
+
+const btn2 = document.getElementById("butoni");
+btn2.addEventListener("click", function() {
+    window.location.href = "logIn.html"
+})
 
