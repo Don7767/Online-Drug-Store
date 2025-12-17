@@ -119,7 +119,7 @@ body {
     gap: 10px;            
 }
 
-.birthday-wrapper .error-text {
+.error-text {
     display: inline-block; 
     white-space: nowrap;   
     visibility: hidden;
@@ -129,6 +129,12 @@ body {
 }
 
 .gender-wrapper {
+    display: flex;
+    align-items: center;   
+    gap: 10px;             
+}
+
+.birthday-wrapper {
     display: flex;
     align-items: center;   
     gap: 10px;             
@@ -211,12 +217,16 @@ body {
     color: red;
     font-size: 11px;
     visibility: hidden;
-    height: 14px;
-    margin-top: 4px;
-    height: 5px;
     font-weight: lighter;
+    display: inline;       
+    margin-right: 10px;    
 }
 
+.error-wrapper {
+    display: flex;
+    gap: 10px;   
+    flex-wrap: wrap; 
+}
 
 .footer {
     width: 100%;

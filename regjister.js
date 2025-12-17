@@ -14,7 +14,7 @@ const genderError = document.getElementById("genderError");
 
 const fullnameRegex = /^[A-Z][a-zA-Z''-]+(?: [A-Z][a-zA-Z''-]+)+$/;
 const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[*&^%$#@!]).{8,}$/;
+const passwordRegex = /^^(?=.+[A-Z])(?=.+\d)(?=.+[*&^%$#@!]).{8,}$$/;
 
 btn.addEventListener("click", function (event) {
     event.preventDefault(); 
@@ -52,7 +52,7 @@ btn.addEventListener("click", function (event) {
         passwordError.style.visibility = "visible";
         valid = false;
     } else if (!passwordRegex.test(password.value.trim())) {
-        passwordError.textContent = "Min 8 chars, 1 uppercase, 1 number, 1 special char";
+        passwordError.textContent = "Min 8 characters, at least one special character, capital letter and number";
         passwordError.style.visibility = "visible";
         valid = false;
     } else {
