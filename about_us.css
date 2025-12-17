@@ -39,6 +39,9 @@ body{
     padding: 30px 25px;
     font-family:'Trebuchet MS', Arial, sans-serif;
 }
+#elemente a:hover{
+    font-weight: bold;
+}
 
 #about-wrapper{
     display: flex;
