@@ -17,7 +17,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
         $fullname = $user->getFullNameByEmail($email);
 
         if(isset($_POST['remember'])){
-            setcookie("fullname", $fullname, time() + (30*24*60*60)); // ruan 30 ditë
+            setcookie("fullname", $fullname, time() + (30*24*60*60));
         }
 
         header("Location: home.php");
