@@ -23,11 +23,11 @@ if(!isset($_SESSION['user_ID'])){
             <img src="logo2.png" alt="Logo">
         </div>
         <nav id="elemente">
-            <a href="home.html">Home</a>
-            <a href="about_us.html">About us</a>
-            <a href="products.html">Products</a>
-            <a href="my_prescription.html">My prescription</a>
-            <a href="LogIn.html">Log In</a>
+            <a href="home.php">Home</a>
+            <a href="about_us.php">About us</a>
+            <a href="products.php">Products</a>
+            <a href="my_prescription.php">My prescription</a>
+            <a href="logout.php">Log Out</a>
         </nav>
     </header>
 
@@ -135,7 +135,7 @@ if(!isset($_SESSION['user_ID'])){
 
                 <div id="produktet">
                     <div class="prod">
-                        <a href="product1.html">
+                        <a href="product1.php">
                             <img src="prod.avif" alt="" class="main">
                             <hr>
                             <h3>Flexibene Caps</h3>
@@ -154,7 +154,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product2.html">
+                        <a href="product2.php">
                             <img src="prod2.avif" alt="" class="main">
                             <hr>
                             <h3>Isomar Spray</h3>
@@ -173,7 +173,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product3.html">
+                        <a href="product3.php">
                             <img src="prod3.avif" alt="" class="main">
                             <hr>
                             <h3>Nutriva Laxilen</h3>
@@ -192,7 +192,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product4.html">
+                        <a href="product4.php">
                             <img src="prod4.avif" alt="" class="main">
                             <hr>
                             <h3>Barkleys Candy</h3>
@@ -211,7 +211,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product5.html">
+                        <a href="product5.php">
                             <img src="prod5.avif" alt="" class="main"> 
                             <hr>
                             <h3>Lotus Essential Balm</h3>
@@ -230,7 +230,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product6.html">
+                        <a href="product6.php">
                             <img src="prod6.avif" alt="" class="main">
                             <hr>
                             <h3>Eubiotica Tea</h3>
@@ -249,7 +249,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product7.html">
+                        <a href="product7.php">
                             <img src="prod7.avif" alt="" class="main">
                             <hr>
                             <h3>Mydoct</h3>
@@ -268,7 +268,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product8.html">
+                        <a href="product8.php">
                             <img src="prod8.avif" alt="" class="main">
                             <hr>
                             <h3>Mydoct Ankerplaste</h3>
@@ -287,7 +287,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product9.html">
+                        <a href="product9.php">
                             <img src="prod9.avif" alt="" class="main">
                             <hr>
                             <h3>Chicco Gel</h3>
@@ -306,7 +306,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product10.html">
+                        <a href="product10.php">
                             <img src="prod10.avif" alt="" class="main">
                             <hr>
                             <h3>Vitabiotics Probiotis</h3>
@@ -325,7 +325,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product11.html">
+                        <a href="product11.php">
                             <img src="prod11.avif" alt="" class="main">
                             <hr>
                             <h3>Brufen Effect</h3>
@@ -344,7 +344,7 @@ if(!isset($_SESSION['user_ID'])){
                     </div>
 
                     <div class="prod">
-                        <a href="product12.html">
+                        <a href="product12.php">
                             <img src="prod12.avif" alt="" class="main">
                             <hr>
                             <h3>Bepanthol Eye Drops</h3>

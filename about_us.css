@@ -38,9 +38,12 @@ body{
     color: black;
     padding: 30px 25px;
     font-family:'Trebuchet MS', Arial, sans-serif;
+    height: 10px;
+    transition: 0.3s;
 }
 #elemente a:hover{
     font-weight: bold;
+    color: white;
 }
 
 #about-wrapper{

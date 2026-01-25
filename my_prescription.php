@@ -24,11 +24,11 @@ if(!isset($_SESSION['user_ID'])){
         <img src="logo2.png" alt="Logo">
     </div>
     <nav id="elemente">
-        <a href="home.html">Home</a>
-        <a href="about_us.html">About us</a>
-        <a href="products.html">Products</a>
-        <a href="my_prescription.html">My prescription</a>
-        <a href="LogIn.html">Log In</a>
+        <a href="home.php">Home</a>
+        <a href="about_us.php">About us</a>
+        <a href="products.php">Products</a>
+        <a href="my_prescription.php">My prescription</a>
+        <a href="logout.php">Log Out</a>
     </nav>
 </header>
 
