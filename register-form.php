@@ -1,6 +1,26 @@
 <?php
 
+include_once 'database.php';
+include_once 'user.php';
 
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $db = new Database();
+    $connection = $db->getConnection();
+    $user = new User(db: $connection);
+
+    $fullname = $_POST['fullname'];
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+    $birthday = $_POST['birthday'];
+    $gender = $_POST['gender'];
+
+    if($user->register(fullname: $fullname, email: $email, password: $password, birthday: $birthday, gender: $gender)){
+        header(header: "Location: LogIn.php");
+        exit;
+    }else{
+        echo "Error registering user!";
+    }
+}
 
 ?>
 
