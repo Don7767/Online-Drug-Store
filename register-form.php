@@ -1,3 +1,10 @@
+<?php
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -31,19 +38,19 @@
             
                 <div class="input-box">
                     <label class="info">Full Name</label>
-                    <input type="text" id="fullname" placeholder="Enter your full name">
+                    <input type="text" id="fullname" placeholder="Enter your full name" name="fullname">
                     <p class="error-text" id="fullnameError"></p>
                 </div>
 
                 <div class="input-box">
                     <label class="info">Email</label>
-                    <input type="text" id="email" placeholder="Enter your email">
+                    <input type="text" id="email" placeholder="Enter your email" name="email">
                     <p class="error-text" id="emailError"></p>
                 </div>
 
                 <div class="input-box">
                     <label class="info">Password</label>
-                    <input type="password" id="password" placeholder="Enter your password">
+                    <input type="password" id="password" placeholder="Enter your password" name="password">
                     <p class="error-text" id="passwordError"></p>
                 </div>
 
