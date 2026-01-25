@@ -6,10 +6,10 @@ const password = document.getElementById("password");
 const userError = document.getElementById("userError");
 const passError = document.getElementById("passError");
 
-const usernameRegex = /^[a-zA-Z0-9]{3,}$/;
-const passwordRegex = /^^(?=.+[A-Z])(?=.+\d)(?=.+[*&^%$#@!]).{8,}$$/;
+const usernameRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[*&^%$#@!]).{8,}$/;
 
-btn.addEventListener("click", function () {
+btn.addEventListener("click", function (event) {
 
     let valid = true;
 
@@ -18,7 +18,7 @@ btn.addEventListener("click", function () {
         userError.style.visibility = "visible";
         valid = false;
     } else if (!usernameRegex.test(username.value.trim())) {
-        userError.textContent = "Min 3 letters or numbers";
+        userError.textContent = "Invalid email format";
         userError.style.visibility = "visible";
         valid = false;
     } else {
@@ -37,12 +37,12 @@ btn.addEventListener("click", function () {
         passError.style.visibility = "hidden";
     }
 
-    if (valid) {
-        window.location.href = "Online%20Drug%20Store/home.php";
+    if (!valid) {
+        event.preventDefault();
     }
 });
 
 const btn2 = document.getElementById("butoni");
 btn2.addEventListener("click", function() {
-    window.location.href = "Online%20Drug%20Store/register-form.php"
+    window.location.href = "/OnlineDrugStore/register-form.php"
 })

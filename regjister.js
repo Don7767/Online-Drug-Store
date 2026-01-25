@@ -17,7 +17,6 @@ const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[*&^%$#@!]).{8,}$/;
 
 btn.addEventListener("click", function (event) {
-    event.preventDefault(); 
 
     let valid = true;
 
@@ -83,14 +82,14 @@ btn.addEventListener("click", function (event) {
         genderError.style.visibility = "hidden";
     }
 
-    if (valid) {
-        window.location.href = "Online%20Drug%20Store/LogIn.php";
+    if (!valid) {
+        event.preventDefault(); // ndalon submit nëse ka gabime
     }
     
 });
 
 const btn2 = document.getElementById("butoni");
 btn2.addEventListener("click", function() {
-    window.location.href = "Online%20Drug%20Store/LogIn.php"
+    window.location.href = "/OnlineDrugStore/LogIn.php"
 })
 
