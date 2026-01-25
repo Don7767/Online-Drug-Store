@@ -1,3 +1,10 @@
+<?php
+
+
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,26 +41,26 @@
             </div>
         </form>
 
-    <form action="" method="POST">
+    <form action="LogIn.php" method="POST">
         <div class="login">
 
             <h2>Log In</h2>
 
             <div class="form-control">
-                <label class="info">Username</label>
-                <input type="text" id="username" placeholder="Username">
+                <label class="info">Email</label>
+                <input type="text" id="username" placeholder="Email" name="email">
                 <p class="error-text" id="userError"></p>
             </div>
 
             <div class="form-control">
                 <label class="info">Password</label>
-                <input type="password" id="password" placeholder="Password">
+                <input type="password" id="password" placeholder="Password" name="password">
                 <p class="error-text" id="passError"></p>
             </div>
 
             <div class="remember">
                 <label id="qeku1">Remember me</label>
-                <input type="checkbox" id="qeku">
+                <input type="checkbox" id="qeku" name="check">
             </div>
 
             <div class="btn-wrapper">
