@@ -1,6 +1,7 @@
 <?php
 
 class Database{
+    private $host = 'localhost';
     private $dbname = 'online_drug_store';
     private $username = 'root';
     private $password = '';

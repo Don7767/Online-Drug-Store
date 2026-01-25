@@ -14,9 +14,13 @@ class User{
 
         $stmt->bindParam(':fullname', $fullname);
         $stmt->binfParam(':email', $email);
-        $stmt->bindParam(':password', $password);
+        $stmt->bindParam(':password', password_hash(password: $password, algo: PASSWORD_DEFAULT));
         $stmt->bindParam(':birthday', $birthday);
         $stmt->bindParam(':gender', $gender);
+
+        if($stmt->execute()){
+            return true;
+        }return false;
     }
 }
 
