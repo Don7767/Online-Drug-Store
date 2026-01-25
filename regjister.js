@@ -84,13 +84,13 @@ btn.addEventListener("click", function (event) {
     }
 
     if (valid) {
-        window.location.href = "home.html";
+        window.location.href = "Online%20Drug%20Store/LogIn.php";
     }
     
 });
 
 const btn2 = document.getElementById("butoni");
 btn2.addEventListener("click", function() {
-    window.location.href = "logIn.html"
+    window.location.href = "Online%20Drug%20Store/LogIn.php"
 })
 

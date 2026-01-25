@@ -38,11 +38,11 @@ btn.addEventListener("click", function () {
     }
 
     if (valid) {
-        window.location.href = "home.html";
+        window.location.href = "Online%20Drug%20Store/home.php";
     }
 });
 
 const btn2 = document.getElementById("butoni");
 btn2.addEventListener("click", function() {
-    window.location.href = "register-form.html"
+    window.location.href = "Online%20Drug%20Store/register-form.php"
 })

@@ -3,6 +3,7 @@
 include_once 'database.php';
 include_once 'user.php';
 
+
 if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $db = new Database();
     $connection = $db->getConnection();
@@ -15,12 +16,13 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $gender = $_POST['gender'];
 
     if($user->register(fullname: $fullname, email: $email, password: $password, birthday: $birthday, gender: $gender)){
-        header(header: "Location: LogIn.php");
-        exit;
+        header("Location: LogIn.php");
+        exit();
     }else{
         echo "Error registering user!";
     }
 }
+
 
 ?>
 
@@ -51,7 +53,7 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     <div class="container">
 
-        <form action="" method="POST">
+        <form action="register-form.php" method="POST">
             <div class="register">
             <h2 id="tit">Register</h2>
 

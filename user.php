@@ -4,16 +4,16 @@ class User{
     private $conn;
     private $tableName = 'user';
 
-    public function __cconstruct($db){
+    public function __construct($db){
         $this->conn = $db;
     }
 
     public function register($fullname, $email, $password, $birthday, $gender):bool{
-        $quey = "INSERT INTO {$this->tableName} (FullName, Email, Password, Birthday, Gender) VALUES(:fullname, :email, :password, :birthday, :gender)";
+        $query = "INSERT INTO {$this->tableName} (FullName, Email, Password, Birthday, Gender) VALUES(:fullname, :email, :password, :birthday, :gender)";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(':fullname', $fullname);
-        $stmt->binfParam(':email', $email);
+        $stmt->bindParam(':email', $email);
         $stmt->bindParam(':password', password_hash(password: $password, algo: PASSWORD_DEFAULT));
         $stmt->bindParam(':birthday', $birthday);
         $stmt->bindParam(':gender', $gender);
@@ -24,7 +24,7 @@ class User{
     }
 
     public function login($email, $password):bool{
-        $quey = "SELECT userID, FullName, Email, Password, Birthday, Gender FROM{$this->tableName} WHERE Email = :email";
+        $query = "SELECT userID, FullName, Email, Password, Birthday, Gender FROM {$this->tableName} WHERE Email = :email";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(':email', $email);
@@ -32,13 +32,29 @@ class User{
 
         if($stmt->rowCount() > 0){
             $row = $stmt->fetch(PDO::FETCH_ASSOC);
-            if(password_verify(password: $password, hash: $row['password'])){
-                session_start();
+            if(password_verify(password: $password, hash: $row['Password'])){
                 $_SESSION['user_ID'] = $row['userID'];
                 $_SESSION['email'] = $row['Email'];
+                $_SESSION['fullname'] = $row['FullName'];
                 return true;
             }
         }return false;
+    }
+
+    public function getFullNameByEmail($email){
+        $query = "SELECT FullName FROM {$this->tableName} WHERE Email = :email";
+        $stmt = $this->conn->prepare($query);
+
+        $stmt->bindParam(':email', $email);
+        $stmt->execute();
+
+        $row = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if($row){
+            return $row['FullName'];
+        }else{
+            return null;
+        }
     }
 }
 

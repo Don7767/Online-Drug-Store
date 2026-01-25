@@ -1,6 +1,31 @@
 <?php
 
+session_start();
 
+include_once 'database.php';
+include_once 'user.php';
+
+if($_SERVER['REQUEST_METHOD'] == 'POST'){
+    $db = new Database();
+    $connection = $db->getConnection();
+    $user = new User(db: $connection);
+
+    $email = $_POST['email'];
+    $password = $_POST['password'];
+
+    if($user->login(email: $email, password: $password)){
+        $fullname = $user->getFullNameByEmail($email);
+
+        if(isset($_POST['remember'])){
+            setcookie("fullname", $fullname, time() + (30*24*60*60)); // ruan 30 ditë
+        }
+
+        header("Location: home.php");
+        exit();
+    }else{
+        echo "Invalid login credentials!";
+    }
+}
 
 ?>
 
@@ -29,7 +54,7 @@
     </header>
 
     <div class="container">
-        <form action="" method="POST">
+        <form action="login.php" method="POST">
             <div id="foto">
                 <div id="tekst">
                     <h4>You don't have an account?</h4>
@@ -60,11 +85,11 @@
 
             <div class="remember">
                 <label id="qeku1">Remember me</label>
-                <input type="checkbox" id="qeku" name="check">
+                <input type="checkbox" id="qeku" name="remember">
             </div>
 
             <div class="btn-wrapper">
-                <input type="button" id="butoni1" value="Log In">
+                <input type="submit" id="butoni1" value="Log In">
             </div>
 
         </div>
@@ -108,8 +133,6 @@
     </div>
 </footer>
 
-<script src="LogIn.js">
-
-</script>
+<script src="LogIn.js"></script>
 </body>
 </html>
