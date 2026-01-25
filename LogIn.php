@@ -15,15 +15,16 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
 
     if($user->login(email: $email, password: $password)){
         $fullname = $user->getFullNameByEmail($email);
+        $userID = $_SESSION['user_ID'];
 
         if(isset($_POST['remember'])){
-            setcookie("fullname", $fullname, time() + (30*24*60*60));
+            setcookie("user_" . $userID, $fullname, time() + (30*24*60*60));
         }
 
         header("Location: home.php");
         exit();
     }else{
-        echo "Invalid login credentials!";
+        echo "<script>alert('Invalid login credentials!');</script>";
     }
 }
 
