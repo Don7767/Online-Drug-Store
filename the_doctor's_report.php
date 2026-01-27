@@ -77,7 +77,7 @@ if(!isset($_SESSION['user_ID'])){
         </div>
 
         <div class="prod">
-            <a href="product1.html">
+            <a href="product1.php">
                 <img src="prod.avif" alt="Flexibene Caps" class="main">
                 <hr>
                 <h3>Flexibene Caps</h3>
@@ -86,7 +86,7 @@ if(!isset($_SESSION['user_ID'])){
         </div>
 
         <div class="prod">
-            <a href="product2.html">
+            <a href="product2.php">
                 <img src="prod2.avif" alt="Isomar Spray" class="main">
                 <hr>
                 <h3>Isomar Spray</h3>

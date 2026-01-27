@@ -16,7 +16,7 @@ btn2.addEventListener("click", function(event) {
     } else {
         idError.style.visibility = "hidden";
         alert("ID number accepted!");
-        window.location.href = "the_doctor's_report.html";
+        window.location.href = "/OnlineDrugStore/the_doctor's_report.php";
     }
 });
 
