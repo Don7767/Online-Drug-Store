@@ -14,11 +14,10 @@ if($_SERVER['REQUEST_METHOD'] == 'POST'){
     $password = $_POST['password'];
 
     if($user->login(email: $email, password: $password)){
-        $fullname = $user->getFullNameByEmail($email);
         $userID = $_SESSION['user_ID'];
 
         if(isset($_POST['remember'])){
-            setcookie("user_" . $userID, $fullname, time() + 3600);
+            setcookie("remember_user", $userID, time() + 3600, "/");
         }
 
         header("Location: home.php");

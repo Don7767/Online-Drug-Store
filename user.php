@@ -40,22 +40,6 @@ class User{
             }
         }return false;
     }
-
-    public function getFullNameByEmail($email){
-        $query = "SELECT FullName FROM {$this->tableName} WHERE Email = :email";
-        $stmt = $this->conn->prepare($query);
-
-        $stmt->bindParam(':email', $email);
-        $stmt->execute();
-
-        $row = $stmt->fetch(PDO::FETCH_ASSOC);
-
-        if($row){
-            return $row['FullName'];
-        }else{
-            return null;
-        }
-    }
 }
 
 ?>
