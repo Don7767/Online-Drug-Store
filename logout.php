@@ -8,4 +8,10 @@ if(isset($_COOKIE['user'])){
 header("Location: LogIn.php");
 exit();
 
+session_start();
+session_destroy();
+header("Location: login.php");
+exit();
+
+
 ?>
