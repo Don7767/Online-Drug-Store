@@ -8,7 +8,7 @@ $conn = $db->getConnection();
 
 $productRepo = new ProductRepository($conn);
 
-// Statistika
+
 $totalUsers = $conn->query("SELECT COUNT(*) FROM user")->fetchColumn();
 $totalMale = $conn->query("SELECT COUNT(*) FROM user WHERE Gender='m'")->fetchColumn();
 $totalFemale = $conn->query("SELECT COUNT(*) FROM user WHERE Gender='f'")->fetchColumn();
@@ -16,12 +16,10 @@ $totalProducts = $conn->query("SELECT COUNT(*) FROM medicines")->fetchColumn();
 $inStock = $conn->query("SELECT COUNT(*) FROM medicines WHERE quantity > 0")->fetchColumn();
 $totalSales = $conn->query("SELECT SUM(total) FROM sales")->fetchColumn();
 
-// Users
 $stmt = $conn->prepare("SELECT * FROM user");
 $stmt->execute();
 $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-// Products
 $products = $productRepo->getAllProducts();
 ?>
 
