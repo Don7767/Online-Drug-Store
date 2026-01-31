@@ -83,7 +83,7 @@ btn.addEventListener("click", function (event) {
     }
 
     if (!valid) {
-        event.preventDefault(); // ndalon submit nëse ka gabime
+        event.preventDefault();
     }
     
 });
