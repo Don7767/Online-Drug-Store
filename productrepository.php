@@ -1,46 +1,60 @@
 <?php
-require_once "productsint.php";
+include_once "database.php";
+include_once "productsint.php";
 
 class ProductRepository implements productsint
 {
     private $conn;
+    private $tableName = 'medicines';
 
-    public function __construct($conn)
+    function __construct($conn)
     {
         $this->conn = $conn;
     }
 
     public function insertProduct($product)
     {
-        $stmt = $this->conn->prepare("INSERT INTO medicines (name, price) VALUES (?, ?, ?)");
-        return $stmt->execute([$product['name'], $product['price']]);
+        $sql = "INSERT INTO {$this->tableName} (name, description, price, quantity)
+                VALUES (?,?,?,?)";
+
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([
+            $product->getName(),
+            $product->getDescription(),
+            $product->getPrice(),
+            $product->getQuantity()
+        ]);
     }
 
     public function getAllProducts()
     {
-        $stmt = $this->conn->query("SELECT * FROM medicines");
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM {$this->tableName}";
+        return $this->conn->query($sql)->fetchAll();
     }
 
     public function getProductById($id)
     {
-        $stmt = $this->conn->prepare("SELECT * FROM medicines WHERE id = ?");
+        $sql = "SELECT * FROM {$this->tableName} WHERE id=?";
+        $stmt = $this->conn->prepare($sql);
         $stmt->execute([$id]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
+        return $stmt->fetch();
     }
 
-    public function updateProduct($id, $name, $price)
+    public function updateProduct($id, $name, $description, $price, $quantity)
     {
-        $stmt = $this->conn->prepare("UPDATE medicines SET name=?, price=?,  WHERE id=?");
-        return $stmt->execute([$name, $price, $id]);
+        $sql = "UPDATE {$this->tableName}
+                SET name=?, description=?, price=?, quantity=?
+                WHERE id=?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$name, $description, $price, $quantity, $id]);
     }
-
-
 
     public function deleteProduct($id)
     {
-        $stmt = $this->conn->prepare("DELETE FROM medicines WHERE id=?");
-        return $stmt->execute([$id]);
+        $sql = "DELETE FROM {$this->tableName} WHERE id=?";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([$id]);
     }
 }
+
 ?>

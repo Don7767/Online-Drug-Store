@@ -1,7 +1,7 @@
 <?php
 session_start();
-require_once "Database.php";
-require_once "ProductRepository.php";
+include_once "database.php";
+include_once "productrepository.php";
 
 $db = new Database();
 $conn = $db->getConnection();
@@ -61,17 +61,29 @@ $products = $productRepo->getAllProducts();
 </div>
 
 <h2> Products List</h2>
+<div id="add">
+    <a class="link" href="addProduct.php">Add Product</a>
+</div>
 <div class="table-wrapper">
 <table>
     <tr>
-        <th>ID</th><th>Name</th><th>Price</th>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Description</th>
+        <th>Price</th>
+        <th>Quantity</th>
+        <th>Edit</th>
+        <th>Delete</th>
     </tr>
-    <?php foreach ($products as $p): ?>
+    <?php foreach($products as $product): ?>
     <tr>
-        <td><?= $p['id'] ?></td>
-        <td><?= $p['name'] ?></td>
-        <td>€<?= number_format($p['price'], 2) ?></td>
-        
+        <td><?= $product['id'] ?></td>
+        <td><?= $product['name'] ?></td>
+        <td><?= $product['description'] ?></td>
+        <td><?= $product['price'] ?></td>
+        <td><?= $product['quantity'] ?></td>
+        <td><a class="link" href="editProduct.php?id=<?= $product['id'] ?>">Edit</a></td>
+        <td><a class="link" href="deleteProduct.php?id=<?= $product['id'] ?>">Delete</a></td>
     </tr>
     <?php endforeach; ?>
 </table>
