@@ -1,5 +1,15 @@
 <?php
 session_start();
+
+if(!isset($_SESSION['user_ID']) && isset($_COOKIE['remember_user'])){
+    $_SESSION['user_ID'] = $_COOKIE['remember_user'];
+}
+
+if(!isset($_SESSION['user_ID'])){
+    header("Location: login.php");
+    exit();
+}
+
 include_once "database.php";
 include_once "productrepository.php";
 
