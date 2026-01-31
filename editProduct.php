@@ -15,7 +15,9 @@ if(isset($_POST['editBtn'])){
         $_POST['name'],
         $_POST['description'],
         $_POST['price'],
-        $_POST['quantity']
+        $_POST['quantity'],
+        $_POST['image'],
+        $_POST['rating_image']
     );
     header("location:dashboard.php");
     exit();
@@ -27,5 +29,7 @@ if(isset($_POST['editBtn'])){
     <textarea name="description"><?=$product['description']?></textarea><br><br>
     <input type="number" step="0.01" name="price" value="<?=$product['price']?>"><br><br>
     <input type="number" name="quantity" value="<?=$product['quantity']?>"><br><br>
+    <input type="text" name="image" value="<?=$product['image']?>"><br><br>
+    <input type="text" name="rating_image" value="<?=$product['rating_image']?>"><br><br>
     <input type="submit" name="editBtn" value="Save">
 </form>

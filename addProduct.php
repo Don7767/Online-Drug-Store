@@ -14,7 +14,9 @@ if(isset($_POST['addBtn'])){
         $_POST['name'],
         $_POST['description'],
         $_POST['price'],
-        $_POST['quantity']
+        $_POST['quantity'],
+        $_POST['image'],
+        $_POST['rating_image']
     );
 
     $repo->insertProduct($product);
@@ -28,5 +30,7 @@ if(isset($_POST['addBtn'])){
     <textarea name="description" placeholder="Description"></textarea><br><br>
     <input type="number" step="0.01" name="price" placeholder="Price"><br><br>
     <input type="number" name="quantity" placeholder="Quantity"><br><br>
+    <input type="text" name="image" placeholder="Product image"><br><br>
+    <input type="text" name="rating_image" placeholder="Product rating image"><br><br>
     <input type="submit" name="addBtn" value="Add Product">
 </form>

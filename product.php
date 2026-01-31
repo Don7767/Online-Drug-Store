@@ -7,14 +7,18 @@ class Product
     private $description;
     private $price;
     private $quantity;
+    private $image;
+    private $rating_image;
 
-    function __construct($id, $name, $description, $price, $quantity)
+    function __construct($id, $name, $description, $price, $quantity, $image, $rating_image)
     {
         $this->id = $id;
         $this->name = $name;
         $this->description = $description;
         $this->price = $price;
         $this->quantity = $quantity;
+        $this->image = $image;
+        $this->rating_image = $rating_image;
     }
 
     function getId() {
@@ -35,6 +39,14 @@ class Product
 
     function getQuantity() {
         return $this->quantity;
+    }
+
+    function getImage(){
+        return $this->image;
+    }
+
+    function getRating_image(){
+        return $this->rating_image;
     }
 }
 ?>

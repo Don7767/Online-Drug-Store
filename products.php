@@ -11,6 +11,14 @@ if(!isset($_SESSION['user_ID'])){
     exit();
 }
 
+include_once 'database.php';
+include_once 'productrepository.php';
+
+$db = new Database();
+$conn = $db->getConnection();
+
+$repo = new ProductRepository($conn);
+$products = $repo->getAllProducts();
 ?>
 
 <!DOCTYPE html>
@@ -366,8 +374,29 @@ if(!isset($_SESSION['user_ID'])){
                             </div>
                         </div>
                     </div>
+    
+
+                    <?php foreach($products as $product): ?>
+                        <div class="prod">
+                            <a href="product.php?id=<?= $product['id'] ?>">
+                                <img src="<?= $product['image'] ?>" alt="" class="main">
+                                <hr>
+                                <h3><?= htmlspecialchars($product['name']) ?></h3>
+                            </a>
+                            <h4><?= number_format($product['price'], 2) ?> €</h4>
+                            <div class="shto">
+                                <p>Add to cart</p>
+                                <img src="cart.png" alt="" id="shto">
+                            </div>
+                            <div class="rateFav">
+                                <img src="<?= $product['rating_image'] ?>" alt="" class="rate">
+                                <div class="fav">
+                                    <img src="fav.png" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
                 </div>
-            </div>
 
             <input type="submit" value="See more" id="butoni3">
         </section>

@@ -14,15 +14,17 @@ class ProductRepository implements productsint
 
     public function insertProduct($product)
     {
-        $sql = "INSERT INTO {$this->tableName} (name, description, price, quantity)
-                VALUES (?,?,?,?)";
+        $sql = "INSERT INTO {$this->tableName} (name, description, price, quantity, image, rating_image)
+                VALUES (?,?,?,?,?,?)";
 
         $stmt = $this->conn->prepare($sql);
         $stmt->execute([
             $product->getName(),
             $product->getDescription(),
             $product->getPrice(),
-            $product->getQuantity()
+            $product->getQuantity(),
+            $product->getImage(),
+            $product->getRating_image()
         ]);
     }
 
@@ -40,13 +42,13 @@ class ProductRepository implements productsint
         return $stmt->fetch();
     }
 
-    public function updateProduct($id, $name, $description, $price, $quantity)
+    public function updateProduct($id, $name, $description, $price, $quantity, $image, $rating_image)
     {
         $sql = "UPDATE {$this->tableName}
-                SET name=?, description=?, price=?, quantity=?
+                SET name=?, description=?, price=?, quantity=?, image=?, rating_image=?
                 WHERE id=?";
         $stmt = $this->conn->prepare($sql);
-        $stmt->execute([$name, $description, $price, $quantity, $id]);
+        $stmt->execute([$name, $description, $price, $quantity, $image, $rating_image, $id]);
     }
 
     public function deleteProduct($id)
