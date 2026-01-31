@@ -36,6 +36,12 @@ $products = $repo->getAllProducts();
             <img src="logo2.png" alt="Logo">
         </div>
         <nav id="elemente">
+            <?php
+                $fullname = $_SESSION['fullname'] ?? '';
+                if($fullname === 'Don Plakolli' || $fullname === 'Blend Osmani') {
+                    echo '<a href="dashboard.php">Dashboard</a>';
+                }
+            ?>
             <a href="home.php">Home</a>
             <a href="about_us.php">About us</a>
             <a href="products.php">Products</a>
