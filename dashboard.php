@@ -13,7 +13,6 @@ $totalUsers = $conn->query("SELECT COUNT(*) FROM user")->fetchColumn();
 $totalMale = $conn->query("SELECT COUNT(*) FROM user WHERE Gender='m'")->fetchColumn();
 $totalFemale = $conn->query("SELECT COUNT(*) FROM user WHERE Gender='f'")->fetchColumn();
 $totalProducts = $conn->query("SELECT COUNT(*) FROM medicines")->fetchColumn();
-$inStock = $conn->query("SELECT COUNT(*) FROM medicines WHERE quantity > 0")->fetchColumn();
 $totalSales = $conn->query("SELECT SUM(total) FROM sales")->fetchColumn();
 
 $stmt = $conn->prepare("SELECT * FROM user");
@@ -39,11 +38,11 @@ $products = $productRepo->getAllProducts();
     <div class="card"><h2><?= $totalMale ?></h2><p>Male</p></div>
     <div class="card"><h2><?= $totalFemale ?></h2><p>Female</p></div>
     <div class="card"><h2><?= $totalProducts ?></h2><p>Total Products</p></div>
-    <div class="card"><h2><?= $inStock ?></h2><p>In Stock</p></div>
+    
     <div class="card"><h2>€<?= number_format($totalSales, 2) ?></h2><p>Total Sales</p></div>
 </div>
 
-<h2>👥 Users List</h2>
+<h2> Users List</h2>
 <div class="table-wrapper">
 <table>
     <tr>
@@ -61,18 +60,18 @@ $products = $productRepo->getAllProducts();
 </table>
 </div>
 
-<h2>💊 Products List</h2>
+<h2> Products List</h2>
 <div class="table-wrapper">
 <table>
     <tr>
-        <th>ID</th><th>Name</th><th>Price</th><th>Quantity</th>
+        <th>ID</th><th>Name</th><th>Price</th>
     </tr>
     <?php foreach ($products as $p): ?>
     <tr>
         <td><?= $p['id'] ?></td>
         <td><?= $p['name'] ?></td>
         <td>€<?= number_format($p['price'], 2) ?></td>
-        <td><?= $p['quantity'] ?></td>
+        
     </tr>
     <?php endforeach; ?>
 </table>

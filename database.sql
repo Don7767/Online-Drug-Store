@@ -2,7 +2,6 @@ CREATE DATABASE IF NOT EXISTS online_drug_store;
 USE online_drug_store;
 
 CREATE TABLE IF NOT EXISTS user (
- (
     userID INT AUTO_INCREMENT PRIMARY KEY,
     FullName VARCHAR(50) NOT NULL,
     Email VARCHAR(255) NOT NULL,
@@ -22,10 +21,10 @@ CREATE TABLE medicines (
     quantity INT
 );
 
-INSERT INTO medicines (name, price, quantity) VALUES
-('Paracetamol', 1.50, 120),
-('Ibuprofen', 2.00, 80),
-('Aspirin', 1.20, 60);
+INSERT INTO medicines (name, price) VALUES
+('Paracetamol', 1.50),
+('Ibuprofen', 2.00),
+('Aspirin', 1.20);
 
 CREATE TABLE sales (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -36,3 +35,7 @@ CREATE TABLE sales (
 INSERT INTO sales (total, sale_date) VALUES
 (120.50, CURDATE()),
 (80.00, CURDATE());
+
+ALTER TABLE medicines DROP COLUMN quantity;
+
+

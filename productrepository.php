@@ -12,8 +12,8 @@ class ProductRepository implements productsint
 
     public function insertProduct($product)
     {
-        $stmt = $this->conn->prepare("INSERT INTO medicines (name, price, quantity) VALUES (?, ?, ?)");
-        return $stmt->execute([$product['name'], $product['price'], $product['quantity']]);
+        $stmt = $this->conn->prepare("INSERT INTO medicines (name, price) VALUES (?, ?, ?)");
+        return $stmt->execute([$product['name'], $product['price']]);
     }
 
     public function getAllProducts()
@@ -29,11 +29,13 @@ class ProductRepository implements productsint
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function updateProduct($id, $name, $description, $quantity, $price)
+    public function updateProduct($id, $name, $price)
     {
-        $stmt = $this->conn->prepare("UPDATE medicines SET name=?, price=?, quantity=? WHERE id=?");
-        return $stmt->execute([$name, $price, $quantity, $id]);
+        $stmt = $this->conn->prepare("UPDATE medicines SET name=?, price=?,  WHERE id=?");
+        return $stmt->execute([$name, $price, $id]);
     }
+
+
 
     public function deleteProduct($id)
     {
