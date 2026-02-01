@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const products = [
     {
-      a: "product3.html",
+      a: "product3.php",
       img: "prod3.avif",
       title: "Buonovit D3",
       desc: "D3 vitamin drops for babies",
@@ -12,28 +12,28 @@ document.addEventListener("DOMContentLoaded", () => {
 
     },
     {
-      a: "product5.html",
+      a: "product5.php",
       img: "prod5.avif",
       title: "Lotus Essential Balm",
       desc: "Pain-relieving balm",
       rate: "rating5.png"
     },
     {
-      a: "product4.html",
+      a: "product4.php",
       img: "prod4.avif",
       title: "Barkleys Candy",
       desc: "Breath-freshening Candy",
       rate: "rating3.png"
     },
     {
-      a: "product7.html",
+      a: "product7.php",
       img: "prod7.avif",
       title: "Mydoct",
       desc: "Cold sore patches",
       rate: "rating4.5.png"
     },
     {
-      a: "product11.html",
+      a: "product11.php",
       img: "prod11.avif",
       title: "Brufen effect",
       desc: "Relieves pain and inflamation",

@@ -30,8 +30,7 @@ if(!isset($_SESSION['user_ID'])){
         </div>
         <nav id="elemente">
             <?php
-                $fullname = $_SESSION['fullname'] ?? '';
-                if($fullname === 'Don Plakolli' || $fullname === 'Blend Osmani') {
+                if(($_SESSION['role'] ?? '') === 'admin') {
                     echo '<a href="dashboard.php">Dashboard</a>';
                 }
             ?>
@@ -117,7 +116,7 @@ if(!isset($_SESSION['user_ID'])){
                     <img src="majt.png" alt="">
                 </div>
                 <div id="produkt1">
-                    <a href="product3.html" id="linku">
+                    <a href="product3.php" id="linku">
                         <img src="prod3.avif" alt="" id="produkt1foto">
                     </a>
                     <hr>

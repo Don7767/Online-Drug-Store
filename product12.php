@@ -29,8 +29,7 @@ if(!isset($_SESSION['user_ID'])){
         </div>
         <nav id="elemente">
             <?php
-                $fullname = $_SESSION['fullname'] ?? '';
-                if($fullname === 'Don Plakolli' || $fullname === 'Blend Osmani') {
+                if(($_SESSION['role'] ?? '') === 'admin') {
                     echo '<a href="dashboard.php">Dashboard</a>';
                 }
             ?>

@@ -24,7 +24,7 @@ class User{
     }
 
     public function login($email, $password):bool{
-        $query = "SELECT userID, FullName, Email, Password, Birthday, Gender FROM {$this->tableName} WHERE Email = :email";
+        $query = "SELECT userID, FullName, Email, Password, Birthday, Gender, Role FROM {$this->tableName} WHERE Email = :email";
         $stmt = $this->conn->prepare($query);
 
         $stmt->bindParam(':email', $email);
@@ -36,6 +36,7 @@ class User{
                 $_SESSION['user_ID'] = $row['userID'];
                 $_SESSION['email'] = $row['Email'];
                 $_SESSION['fullname'] = $row['FullName'];
+                $_SESSION['role'] = $row['Role'];
                 return true;
             }
         }return false;

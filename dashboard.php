@@ -10,6 +10,11 @@ if(!isset($_SESSION['user_ID'])){
     exit();
 }
 
+if(($_SESSION['role'] ?? '') !== 'admin'){
+    header("Location: home.php");
+    exit();
+}
+
 include_once "database.php";
 include_once "productrepository.php";
 
@@ -47,8 +52,7 @@ $products = $productRepo->getAllProducts();
         </div>
         <nav id="elemente">
             <?php
-                $fullname = $_SESSION['fullname'] ?? '';
-                if($fullname === 'Don Plakolli' || $fullname === 'Blend Osmani') {
+                if(($_SESSION['role'] ?? '') === 'admin') {
                     echo '<a href="dashboard.php">Dashboard</a>';
                 }
             ?>
